@@ -1,14 +1,13 @@
 -- phpMyAdmin SQL Dump
--- version 4.9.0.1
+-- version 5.1.0
 -- https://www.phpmyadmin.net/
 --
--- Host: localhost
--- Generation Time: Jul 09, 2021 at 08:15 AM
--- Server version: 10.3.16-MariaDB
--- PHP Version: 7.1.30
+-- Host: 127.0.0.1
+-- Generation Time: Jul 27, 2021 at 08:37 AM
+-- Server version: 10.4.19-MariaDB
+-- PHP Version: 8.0.6
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
-SET AUTOCOMMIT = 0;
 START TRANSACTION;
 SET time_zone = "+00:00";
 
@@ -61,9 +60,9 @@ CREATE TABLE `tbldepartments` (
 --
 
 INSERT INTO `tbldepartments` (`id`, `DepartmentName`, `DepartmentShortName`, `DepartmentCode`, `CreationDate`) VALUES
-(1, 'Human Resource', 'HR', 'HR001', '2017-11-01 07:16:25'),
-(2, 'Information Technology', 'IT', 'IT001', '2017-11-01 07:19:37'),
-(3, 'Operations', 'OP', 'OP1', '2017-12-02 21:28:56');
+(1, 'Human Resource', 'HR', 'HR001', '2021-07-26 06:12:58'),
+(2, 'Information Technology', 'IT', 'IT001', '2021-07-26 06:13:02'),
+(3, 'Operations', 'OP', 'OP1', '2021-07-26 06:13:08');
 
 -- --------------------------------------------------------
 
@@ -94,8 +93,8 @@ CREATE TABLE `tblemployees` (
 --
 
 INSERT INTO `tblemployees` (`id`, `EmpId`, `FirstName`, `LastName`, `EmailId`, `Password`, `Gender`, `Dob`, `Department`, `Address`, `City`, `Country`, `Phonenumber`, `Status`, `RegDate`) VALUES
-(1, 'EMP101', 'Gautam', 'Arya', 'er.gautamarya@gmail.com', '827ccb0eea8a706c4c34a16891f84e7b', 'Male', '3 February, 1999', 'Information Technology', 'New Delhi', 'Delhi', 'India', '9608993215', 1, '2021-07-07 11:29:59'),
-(2, 'EMP102', 'sanjeev', 'kumar', 'phptpoint@gmail.com', '827ccb0eea8a706c4c34a16891f84e7b', 'Male', '3 February, 1990', 'Information Technology', 'Noida ', 'Up', 'India', '8587944255', 1, '2017-11-10 13:40:02');
+(1, 'EMP101', 'Gaurav', 'Agarwal', 'guptagaurav282@gmail.com', '827ccb0eea8a706c4c34a16891f84e7b', 'Male', '26 July, 2021', 'Information Technology', 'New Delhi', 'Delhi', 'India', '9808805961', 1, '2021-07-26 11:29:59'),
+(2, 'EMP102', 'sanjeev', 'kumar', 'test@test.com', '827ccb0eea8a706c4c34a16891f84e7b', 'Male', '3 February, 1990', 'Information Technology', 'Noida ', 'Up', 'India', '8587944255', 1, '2021-07-26 13:40:02');
 
 -- --------------------------------------------------------
 
@@ -122,10 +121,10 @@ CREATE TABLE `tblleaves` (
 --
 
 INSERT INTO `tblleaves` (`id`, `LeaveType`, `ToDate`, `FromDate`, `Description`, `PostingDate`, `AdminRemark`, `AdminRemarkDate`, `Status`, `IsRead`, `empid`) VALUES
-(7, 'Casual Leave', '10/02/2021', '29/10/2021', 'test', '2021-05-01 13:11:21', 'publishing industries for ', '2017-12-02 23:26:27 ', 2, 1, 1),
-(8, 'Medical Leave test', '21/10/2021', '25/10/2021', 'test', '2021-05-01 11:14:14', 'Lorem ipsum  borum.', '2017-12-02 23:24:39 ', 1, 1, 1),
+(7, 'Casual Leave', '10/02/2021', '29/10/2021', 'test', '2021-05-01 13:11:21', 'publishing industries for ', '2021-12-02 23:26:27 ', 2, 1, 1),
+(8, 'Medical Leave test', '21/10/2021', '25/10/2021', 'test', '2021-05-01 11:14:14', 'Lorem ipsum  borum.', '2021-12-02 23:24:39 ', 1, 1, 1),
 (9, 'Medical Leave test', '08/12/2022', '12/12/2022', 'test', '2021-06-01 18:26:01', 'ok', '2021-07-07 16:13:33 ', 2, 1, 2),
-(10, 'Restricted Holiday(RH)', '25/12/2021', '25/12/2022', 'test', '2021-07-02 08:29:07', 'done', '2017-12-03 14:06:12 ', 1, 1, 1),
+(10, 'Restricted Holiday(RH)', '25/12/2021', '25/12/2022', 'test', '2021-07-02 08:29:07', 'done', '2021-12-03 14:06:12 ', 1, 1, 1),
 (11, 'Casual Leave', '11/02/2033', '11/02/2033', 'dbdfb', '2021-07-07 10:51:37', 'goooo', '2021-07-07 16:30:52 ', 1, 1, 1);
 
 -- --------------------------------------------------------
@@ -146,9 +145,9 @@ CREATE TABLE `tblleavetype` (
 --
 
 INSERT INTO `tblleavetype` (`id`, `LeaveType`, `Description`, `CreationDate`) VALUES
-(1, 'Casual Leave', 'Casual Leave ', '2017-11-01 12:07:56'),
-(2, 'Medical Leave test', 'Medical Leave  test', '2017-11-06 13:16:09'),
-(3, 'Restricted Holiday(RH)', 'Restricted Holiday(RH)', '2017-11-06 13:16:38');
+(1, 'Casual Leave', 'Casual Leave ', '2021-07-26 12:07:56'),
+(2, 'Medical Leave test', 'Medical Leave  test', '2021-07-26 13:16:09'),
+(3, 'Restricted Holiday(RH)', 'Restricted Holiday(RH)', '2021-07-26 13:16:38');
 
 --
 -- Indexes for dumped tables
